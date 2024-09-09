@@ -4,7 +4,7 @@ const readContainer = document.querySelector(".read-container");
 const notReadContainer = document.querySelector(".not-read-container");
 
 const modal = document.querySelector(".modal");
-const modalCancelBtn = document.querySelector("modal");
+const modalCancelBtn = document.getElementById("modal-cancel-btn");
 const bookForm = document.getElementById("book-form");
 const bookTitle = document.getElementById("title");
 const bookAuthor = document.getElementById("author");
@@ -36,4 +36,11 @@ function reset() {
     bookPages.value = "";
     bookStatus.checked = false;
 }
+
+newBookBtn.addEventListener("click", () => modal.showModal());
+
+modalCancelBtn.addEventListener("click", () => {
+    reset();
+    modal.close();
+})
 
