@@ -11,4 +11,22 @@ const bookAuthor = document.getElementById("author");
 const bookPages = document.getElementById("pages");
 const bookStatus = document.getElementById("status");
 
+const myLibrary = [];
+
+function Book(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+}
+
+function addBookToLibrary() {
+    const bookTitleVal = bookTitle.value;
+    const bookAuthorVal = bookAuthorVal.value;
+    const bookPagesVal = Number(bookPagesVal.value);
+    const bookStatusVal = bookStatus.checked;
+
+    const book = new Book(bookTitleVal, bookAuthorVal, bookPagesVal, bookStatusVal);
+    myLibrary.push(book);
+}
 
