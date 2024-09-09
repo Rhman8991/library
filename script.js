@@ -51,3 +51,20 @@ bookForm.addEventListener("submit", e => {
     modal.close();
 })
 
+function renderBooks() {
+    readContainer.innerHTML = "";
+    notReadContainer.innerHTML = "";
+    myLibrary.forEach(({title, author, pages, status}, index) => {
+        const bookStat = status ? "Not Read" : "Read";
+        const card = 
+            `<div class="card" data-index="${index}">
+                <h3>Title: ${title}</h3>
+                <p>Auhtor: ${author}</p>
+                <p>Number of Pages: ${pages}</div>
+                <button type="button" class="change-status-btn">${bookStat}</button>
+                <button type="button" class="remove-btn">Remove</button>
+            </div>`;
+        return status ? readContainer.innerHTML += card : notReadContainer.innerHTML += card;
+    })
+}
+
