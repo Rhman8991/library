@@ -30,3 +30,10 @@ function addBookToLibrary() {
     myLibrary.push(book);
 }
 
+function reset() {
+    bookTitle.value = "";
+    bookAuthor.value = "";
+    bookPages.value = "";
+    bookStatus.checked = false;
+}
+
