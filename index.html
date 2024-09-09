@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1>My Library</h1>
+    <button type="button" id="new-book-btn">New Book</button>
+    <div>
+        <h2>Read</h2>
+        <div class="read-container"></div>
+    </div>
+    <div>
+        <h2>Not Read</h2>
+        <div class="not-read-container"></div>
+    </div>
+    <dialog class="modal">
+        <form action="" id="book-form">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required>
+            <label for="pages">Number of Pages</label>
+            <input type="number" name="pages" id="pages">
+            <input type="checkbox" name="status" id="status">
+            <label for="status">I have read the book</label>
+            <button type="button" id="modal-cancel-btn">Cancel</button>
+            <button type="submit">Add Book to Library</button>
+        </form>
+    </dialog>
     <script src="./script.js"></script>
 </body>
 </html>
