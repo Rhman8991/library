@@ -44,3 +44,10 @@ modalCancelBtn.addEventListener("click", () => {
     modal.close();
 })
 
+bookForm.addEventListener("submit", e => {
+    e.preventDefault();
+    addBookToLibrary();
+    reset();
+    modal.close();
+})
+
