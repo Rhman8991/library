@@ -23,7 +23,7 @@ function Book(title, author, pages, status) {
 function addBookToLibrary() {
     const bookTitleVal = bookTitle.value;
     const bookAuthorVal = bookAuthorVal.value;
-    const bookPagesVal = Number(bookPagesVal.value);
+    const bookPagesVal = Number(bookPages.value);
     const bookStatusVal = bookStatus.checked;
 
     const book = new Book(bookTitleVal, bookAuthorVal, bookPagesVal, bookStatusVal);
