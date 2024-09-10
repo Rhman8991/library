@@ -22,7 +22,7 @@ function Book(title, author, pages, status) {
 
 function addBookToLibrary() {
     const bookTitleVal = bookTitle.value;
-    const bookAuthorVal = bookAuthorVal.value;
+    const bookAuthorVal = bookAuthor.value;
     const bookPagesVal = Number(bookPages.value);
     const bookStatusVal = bookStatus.checked;
 
@@ -47,6 +47,7 @@ modalCancelBtn.addEventListener("click", () => {
 bookForm.addEventListener("submit", e => {
     e.preventDefault();
     addBookToLibrary();
+    renderBooks()
     reset();
     modal.close();
 })
