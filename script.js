@@ -61,11 +61,14 @@ function renderBooks() {
             `<div class="card" data-index="${index}">
                 <h3>Title: ${title}</h3>
                 <p>Auhtor: ${author}</p>
-                <p>Number of Pages: ${pages}</div>
+                <p>Number of Pages: ${pages}</p>
                 <button type="button" class="change-status-btn">${bookStat}</button>
                 <button type="button" class="remove-btn">Remove</button>
             </div>`;
         return status ? readContainer.innerHTML += card : notReadContainer.innerHTML += card;
     })
 }
+
+
+
 
