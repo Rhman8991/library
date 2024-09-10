@@ -69,6 +69,16 @@ function renderBooks() {
     })
 }
 
-
+document.addEventListener("click", e => {
+    const index = Number(e.target.parentNode.dataset.index)
+    if(e.target.className === "change-status-btn") {
+        myLibrary[index].status = !myLibrary[index].status;
+        renderBooks();
+    }
+    if(e.target.className === "remove-btn") {
+        myLibrary.splice(index, 1);
+        renderBooks();
+    }
+})
 
 
