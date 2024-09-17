@@ -17,11 +17,11 @@
         </div>
         <div class="container">
             <h2>Read</h2>
-            <div class="read-container card-container"></div>
+            <div class="read-container"></div>
         </div>
         <div class="container">
             <h2>Not Read</h2>
-            <div class="not-read-container card-container"></div>
+            <div class="not-read-container"></div>
         </div>
     </div>
     <dialog class="modal">
@@ -32,10 +32,14 @@
             <input type="text" name="author" id="author" required>
             <label for="pages">Number of Pages</label>
             <input type="number" name="pages" id="pages">
-            <input type="checkbox" name="status" id="status">
-            <label for="status">I have read the book</label>
-            <button type="button" id="modal-cancel-btn">Cancel</button>
-            <button type="submit">Add Book to Library</button>
+            <div class="form-chkbx-container">
+                <input type="checkbox" name="status" id="status">
+                <label for="status">I have read the book</label>
+            </div>
+            <div class="form-btn-container">
+                <button type="button" id="modal-cancel-btn">Cancel</button>
+                <button type="submit">Add Book to Library</button>
+            </div>
         </form>
     </dialog>
     <script src="./script.js"></script>

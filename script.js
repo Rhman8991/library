@@ -62,15 +62,17 @@ function renderBooks() {
                 <h3>Title: ${title}</h3>
                 <p>Auhtor: ${author}</p>
                 <p>Number of Pages: ${pages}</p>
-                <button type="button" class="change-status-btn">${bookStat}</button>
-                <button type="button" class="remove-btn">Remove</button>
+                <div class="card-btn-container">
+                    <button type="button" class="change-status-btn">${bookStat}</button>
+                    <button type="button" class="remove-btn">Remove</button>
+                </div>
             </div>`;
         return status ? readContainer.innerHTML += card : notReadContainer.innerHTML += card;
     })
 }
 
 document.addEventListener("click", e => {
-    const index = Number(e.target.parentNode.dataset.index)
+    const index = Number(e.target.closest(".card").dataset.index)
     if(e.target.className === "change-status-btn") {
         myLibrary[index].status = !myLibrary[index].status;
         renderBooks();

@@ -2,4 +2,119 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.library {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 150px auto auto;
+    gap: 16px;
+}
+
+.header {
+    padding: 32px;
+    background-color: #373F51;
+}
+
+h1 {
+    margin-bottom: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#new-book-btn {
+    padding: 8px 32px;
+    font-size: 14px;
+    font-weight: 900;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #58A4B0;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.container {
+    background-color: #D8DBE2;
+}
+
+h2 {
+    padding: 8px 32px;
+    background-color: #58A4B0;
+    color: #ffffff;
+}
+
+.modal {
+    width: 450px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A9BCD0;
+    border-style: none;
+    box-shadow: 2px 4px 4px#373F51;
+}
+
+#book-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 8px;
+    padding: 4px 8px;
+}
+
+input#status {
+    margin-right: 6px;
+}
+
+.form-btn-container {
+    margin: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+form button {
+    padding: 8px 24px;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.read-container, 
+.not-read-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 16px;
+}
+
+.card {
+    width: 250px;
+    height: fit-content;
+    padding: 8px 16px;
+    background-color: #DAA49A;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card h3 {
+    padding: 4px 8px;
+    background-color: #373F51;
+    color: #ffffff;
+}
+
+.card-btn-container {
+    display: flex;
+    gap: 8px;
+}
+
+.card button {
+    padding: 4px 16px;
+    border-style: none;
+    border-radius: 15px;
+    cursor: pointer;
 }
