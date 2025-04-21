@@ -13,11 +13,13 @@ const bookStatus = document.getElementById("status");
 
 const myLibrary = [];
 
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
+class Book{
+        constructor(title, author, pages, status) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.status = status;
+    }
 }
 
 function addBookToLibrary() {
@@ -76,6 +78,7 @@ document.addEventListener("click", e => {
     if(e.target.className === "change-status-btn") {
         myLibrary[index].status = !myLibrary[index].status;
         renderBooks();
+        console.log(index)
     }
     if(e.target.className === "remove-btn") {
         myLibrary.splice(index, 1);
